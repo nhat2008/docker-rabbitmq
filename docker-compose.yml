@@ -1,0 +1,11 @@
+################ RABBITMQ ################
+rabbitmq:
+  build: ./rabbitmq
+  environment:
+   SERVICE_NAME: rabbitmq
+   RABBITMQ_USER: admin
+   RABBITMQ_PASS: admin
+  ports:
+   - "5672:5672"
+   - "15672:15672"
+  restart: always
